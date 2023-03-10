@@ -1,0 +1,30 @@
+.header {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  height: 100px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  justify-content: space-around;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tool {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+}

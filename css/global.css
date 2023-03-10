@@ -1,0 +1,12 @@
+/* 전체 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
