@@ -10,15 +10,7 @@
 
 .logo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-}
-
-.logo img {
   height: 100px;
-  width: 100px;
 }
 
 .nav {

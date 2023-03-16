@@ -8,18 +8,11 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dongle&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="header">
       <div class="logo">
         <img src="img/road-trip.png" />
-        <div>Enjoy Trip</div>
       </div>
       <div class="nav">
         <div>지역별 여행지</div>
@@ -35,12 +28,60 @@
     </div>
     <div class="main">
       <div class="main-img-box">
-        <!-- <img class="main-img" src="img/한라산 백록담.png" /> -->
-        <!-- <img class="main-img" src="img/지리산국립공원.png" /> -->
         <img class="main-img" src="img/서울.jpg" />
         <img class="main-img" src="img/경복궁.png" />
       </div>
+      <div class="search">
+        <form role="search">
+          <select
+            id="search-area"
+            class="search-area"
+            aria-label="Default select example"
+          >
+            <option value="0" selected>검색 할 지역 선택</option>
+          </select>
+          <select
+            id="search-content-id"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option value="0" selected>관광지 유형</option>
+            <option value="12">관광지</option>
+            <option value="14">문화시설</option>
+            <option value="15">축제공연행사</option>
+            <option value="25">여행코스</option>
+            <option value="28">레포츠</option>
+            <option value="32">숙박</option>
+            <option value="38">쇼핑</option>
+            <option value="39">음식점</option>
+          </select>
+          <input
+            id="search-keyword"
+            class="form-control me-2"
+            type="search"
+            placeholder="검색어"
+            aria-label="검색어"
+          />
+          <button id="btn-search" class="btn btn-outline-success" type="submit">
+            검색
+          </button>
+        </form>
+      </div>
+      <div id="map" style="width: 500px; height: 400px"></div>
     </div>
     <div class="footer"></div>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49a1fde576ab78e277bbb7a44293742b"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3,
+      };
+      var map = new kakao.maps.Map(container, options);
+    </script>
+    <script src="js/location.js"></script>
   </body>
 </html>
