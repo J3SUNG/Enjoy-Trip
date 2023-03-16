@@ -36,11 +36,12 @@
         <img class="main-img" src="img/경복궁.png" />
       </div>
       <div class="search">
-        <form role="search" method="get">
+        <form method="get" action="index.html">
           <select
             id="search-area"
             class="search-area"
             aria-label="Default select example"
+            name="loc"
           >
             <option value="0" selected>검색 할 지역 선택</option>
           </select>
@@ -48,6 +49,7 @@
             id="search-content-id"
             class="form-select"
             aria-label="Default select example"
+            name="detailLoc"
           >
             <option value="0" selected>관광지 유형</option>
             <option value="12">관광지</option>
@@ -65,13 +67,9 @@
             type="search"
             placeholder="검색어"
             aria-label="검색어"
+            name="search"
           />
-          <button
-            id="btn-search"
-            class="btn btn-outline-success"
-            type="submit"
-            onclick="onClickSearch()"
-          >
+          <button id="btn-search" class="btn btn-outline-success" type="submit">
             검색
           </button>
         </form>
